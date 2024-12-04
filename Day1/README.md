@@ -14,7 +14,7 @@ Once we download the files after converting them, we notice there are two files:
 - Running `file somg.mp3`, we immediately see that `somg.mp3` is not an MP3 file. 
 
 ![file somg.mp3 Output](images/somg_file_analysis.png)
-![exiftool somg.mp3 Output] (images/somg_exiftool_analysis.png)
+![exiftool somg.mp3 Output](images/somg_exiftool_analysis.png)
 
 - Running `exiftool somg.mp3`, we see that it is actually a `.lnk` file that downloads and executes a malicious PowerShell script. If we visit the link it is downloading the script from ([IS.ps1](https://raw.githubusercontent.com/MMWarevilleTHM/IS/refs/heads/main/IS.ps1)), we can see that it is a PowerShell script meant to collect cryptocurrency wallets and browser credentials from victims’ PCs. The script also contains the URL to the C2 server where stolen data is sent. Additionally, the file is signed by "M.M."
 
