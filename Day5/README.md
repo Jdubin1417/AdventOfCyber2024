@@ -24,7 +24,7 @@ After configuring Burp Suite, we used the embedded browser to browse the WishVil
 
 ![Browsing to WishVille Application] (images/WishlistButton)
 
-![Making a Wish] (images/WishMade)
+![Making a Wish] (images/WishMade.png)
 ---
 
 #### Crafting the Initial Payload
