@@ -75,7 +75,7 @@ Found the second flag: `THM{HiddenClue}`
 - Extract relevant `EventRecordID` from `YaraMatches.txt`
 - Apply a custom filter in Event Viewer:
 
-```eventviewer
+```yaml
 <QueryList>
   <Query Id="0" Path="Microsoft-Windows-Sysmon/Operational">
     <Select Path="Microsoft-Windows-Sysmon/Operational">
@@ -83,6 +83,7 @@ Found the second flag: `THM{HiddenClue}`
     </Select>
   </Query>
 </QueryList>```
+
 
 - Review Sysmon log details to identify the Parent Process, the Command Line Used, and User Privileges.
 
