@@ -53,7 +53,7 @@ Analyze and detect evasive malware behavior using YARA rules, Sysmon, and Floss,
 - Run `MerryChristmas.exe` from `C:\Tools\Malware`
 - The custom EDR flagged the malicious registry query and displayed a popup containing the flag.
 
-![FlagPopup] (images/MalwareRanFlagFound.png)
+![FlagPopup](images/MalwareRanFlagFound.png)
 
 ### Adding More Evasion Techniques
 - The registry query was encoded using Base64 and executed via PowerShell:
