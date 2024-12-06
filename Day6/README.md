@@ -43,7 +43,8 @@ Analyze and detect evasive malware behavior using YARA rules, Sysmon, and Floss,
 
       condition:
           $cmd
-  }```
+  }
+ ```
 
 - The custom script logged matching events in `C:\Tools\YaraMatches.txt`
 
@@ -82,7 +83,8 @@ Found the second flag: `THM{HiddenClue}`
       *[System[(EventRecordID="INSERT_EVENT_RECORD_ID_HERE")]]
     </Select>
   </Query>
-</QueryList>```
+</QueryList>
+```
 
 
 - Review Sysmon log details to identify the Parent Process, the Command Line Used, and User Privileges.
