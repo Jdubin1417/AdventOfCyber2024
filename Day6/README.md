@@ -75,7 +75,8 @@ Found the second flag: `THM{HiddenClue}`
 - Extract relevant `EventRecordID` from `YaraMatches.txt`
 - Apply a custom filter in Event Viewer:
 
-```<QueryList>
+```eventviewer
+<QueryList>
   <Query Id="0" Path="Microsoft-Windows-Sysmon/Operational">
     <Select Path="Microsoft-Windows-Sysmon/Operational">
       *[System[(EventRecordID="INSERT_EVENT_RECORD_ID_HERE")]]
