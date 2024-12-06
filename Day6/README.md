@@ -43,8 +43,8 @@ Analyze and detect evasive malware behavior using YARA rules, Sysmon, and Floss,
 
       condition:
           $cmd
-  }
-```
+  }```
+
 
 ---
 
