@@ -45,9 +45,6 @@ Analyze and detect evasive malware behavior using YARA rules, Sysmon, and Floss,
           $cmd
   }```
 
-
----
-
 - The custom script logged matching events in `C:\Tools\YaraMatches.txt`
 
 ![YaraMatches.txt](images/YaraMatchesTxt.png)
@@ -56,14 +53,14 @@ Analyze and detect evasive malware behavior using YARA rules, Sysmon, and Floss,
 - Run `MerryChristmas.exe` from `C:\Tools\Malware`
 - The custom EDR flagged the malicious registry query and displayed a popup containing the flag.
 
-![Flag Popup] (images/MalwareRanFlagFound.png)
+![FlagPopup] (images/MalwareRanFlagFound.png)
 
 ### Adding More Evasion Techniques
 - The registry query was encoded using Base64 and executed via PowerShell:
 	- **Encoded Command:** `RwBlAHQALQBJAHQAZQBtAFAAcgBvAHAAZQByAHQAeQAgAC0AUABhAHQAaAAgACIASABLAEwATQA6AFwAUwBvAGYAdAB3AGEAcgBlAFwATQBpAGMAcgBvAHMAbwBmAHQAXABXAGkAbgBkAG8AdwBzAFwAQwB1AHIAcgBlAG4AdABWAGUAcgBzAGkAbwBuACIAIAAtAE4AYQBtAGUAIABQAHIAbwBnAHIAYQBtAEYAaQBsAGUAcwBEAGkAcgA=`
 	- Use CyberChef to decode the Base64 String to reveal the PowerShell Command:
 	
-![Decoded Command](images/CyberChef.png)
+![DecodedCommand](images/CyberChef.png)
 
 ### Using Floss for Obfuscated String Detection
 
@@ -72,7 +69,7 @@ Run Floss on the Malware:
 Review malstrings.txt for hidden strings.
 Found the second flag: `THM{HiddenClue}`
 
-![malstrings Text File] (images/2ndFlagFound.png)
+![malstringsTextFile] (images/2ndFlagFound.png)
 
 ### Analyzing Sysmon Logs with YARA Rules
 - Extract relevant `EventRecordID` from `YaraMatches.txt`
@@ -91,9 +88,9 @@ Found the second flag: `THM{HiddenClue}`
 
 - Review Sysmon log details to identify the Parent Process, the Command Line Used, and User Privileges.
 
-![Apply Custom Filter] (images/FilterCurrentLog.png)
+![ApplyCustomFilter] (images/FilterCurrentLog.png)
 
-![Event Details] (images/EventDetails.png)
+![EventDetails] (images/EventDetails.png)
 
 ---
 
