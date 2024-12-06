@@ -74,15 +74,15 @@ Found the second flag: `THM{HiddenClue}`
 ### Analyzing Sysmon Logs with YARA Rules
 - Extract relevant `EventRecordID` from `YaraMatches.txt`
 - Apply a custom filter in Event Viewer:
-```
-<QueryList>
+
+```<QueryList>
   <Query Id="0" Path="Microsoft-Windows-Sysmon/Operational">
     <Select Path="Microsoft-Windows-Sysmon/Operational">
       *[System[(EventRecordID="INSERT_EVENT_RECORD_ID_HERE")]]
     </Select>
   </Query>
-</QueryList>
-```
+</QueryList>```
+
 - Review Sysmon log details to identify the Parent Process, the Command Line Used, and User Privileges.
 
 ![Apply Custom Filter] (images/FilterCurrentLog.png)
