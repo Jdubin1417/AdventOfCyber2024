@@ -85,7 +85,7 @@ Found the second flag: `THM{HiddenClue}`
   </Query>
 </QueryList>
 ```
-
+---
 
 - Review Sysmon log details to identify the Parent Process, the Command Line Used, and User Privileges.
 
