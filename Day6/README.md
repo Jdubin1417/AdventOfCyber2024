@@ -69,13 +69,13 @@ Run Floss on the Malware:
 Review malstrings.txt for hidden strings.
 Found the second flag: `THM{HiddenClue}`
 
-![malstrings.txt] (images/2ndFlagFound.png)
+![malstrings Text File] (images/2ndFlagFound.png)
 
 ### Analyzing Sysmon Logs with YARA Rules
 - Extract relevant `EventRecordID` from `YaraMatches.txt`
 - Apply a custom filter in Event Viewer:
 
-```yaml
+```xml
 <QueryList>
   <Query Id="0" Path="Microsoft-Windows-Sysmon/Operational">
     <Select Path="Microsoft-Windows-Sysmon/Operational">
