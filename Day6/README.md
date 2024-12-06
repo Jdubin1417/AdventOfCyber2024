@@ -69,7 +69,7 @@ Run Floss on the Malware:
 Review malstrings.txt for hidden strings.
 Found the second flag: `THM{HiddenClue}`
 
-![malstringsTextFile] (images/2ndFlagFound.png)
+![malstringsTextFile](images/2ndFlagFound.png)
 
 ### Analyzing Sysmon Logs with YARA Rules
 - Extract relevant `EventRecordID` from `YaraMatches.txt`
@@ -88,9 +88,9 @@ Found the second flag: `THM{HiddenClue}`
 
 - Review Sysmon log details to identify the Parent Process, the Command Line Used, and User Privileges.
 
-![ApplyCustomFilter] (images/FilterCurrentLog.png)
+![ApplyCustomFilter](images/FilterCurrentLog.png)
 
-![EventDetails] (images/EventDetails.png)
+![EventDetails](images/EventDetails.png)
 
 ---
 
