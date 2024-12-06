@@ -46,6 +46,8 @@ Analyze and detect evasive malware behavior using YARA rules, Sysmon, and Floss,
   }
 ```
 
+---
+
 - The custom script logged matching events in `C:\Tools\YaraMatches.txt`
 
 ![YaraMatches.txt](images/YaraMatchesTxt.png)
