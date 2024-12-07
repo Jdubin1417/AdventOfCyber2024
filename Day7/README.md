@@ -71,7 +71,7 @@ The RDS logs revealed that donations were redirected to an account owned by `May
 - **Unauthorized Actions on S3 Bucket:** User `glitch` accessed the S3 bucket to upload a tampered flyer, redirecting donations.
 - **Compromised Account:** Logs reveal that the `mcskidy` account created `glitch` and assigned administrative access from an IP inconsistent with `mcskidy`'s usual activity.
 - **Suspicious IP Usage:** The IP `53.94.201.69` was consistently used for malicious activities by `mcskidy`, `glitch`, and `mayor_malware` accounts.
-    - **McSkidy's Actual IP:** McSkidy's actual IP is 31.210.15.79 which differs from the IP performing malicious activities.
+    - **McSkidy's Actual IP:** McSkidy's actual IP is `31.210.15.79` which differs from the IP performing malicious activities.
 - **Redirected Donations:** RDS logs confirm donations were redirected to `Mayor Malware`'s fraudulent account.
 
 ---
