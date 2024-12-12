@@ -31,15 +31,15 @@ Understand and exploit a race condition vulnerability in a banking application, 
 
 ---
 
-### Exploiting the Race Condition
-- By exploiting the race condition, multiple concurrent transfers were processed without updating the account balance in time.
-- This resulted in a negative balance for the sender and an inflated balance for the recipient.
+### Exploiting with Glitch's Account
+- Captured a new request using Glitch's account, and created 10 requests to send simultaneously to exploit the race condition.
 
 ![Negative Balance Achieved](images/glitchRequestCaptured.png)
 
 ---
 
 ### Verifying the Exploit
+- Created 10 requests with the above capture to transfer over $2000 out of Glitch's account.
 - Successfully exploited the race condition and verified the vulnerability by transferring over $2000.
 - Retrieved the flag from the dashboard after the exploit.
 
