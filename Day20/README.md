@@ -21,16 +21,14 @@ Wireshark is a powerful tool for analyzing network traffic and understanding how
 
 2. **Analyzing Key Packets**:
    - **Frame 440**: The payload sent a POST request to the C2 server containing the message:
-     > "I am in Mayor!"
+
      ![First Message](images/HTTPFirstMessage.png)
      
    - **Frame 457**: The C2 server responded with a GET request and sent the command:
-     > "whoami"
      ![C2 Command](images/CommandSentByC2.png)
 
-3. **File Exfiltration**:
-   The attacker exfiltrated a critical file via POST:
-   > Filename: `credentials.txt`
+   - The attacker exfiltrated a critical file via POST:
+   ![C2 Command](images/CommandSentByC2.png)
 
 ---
 
@@ -38,7 +36,7 @@ Wireshark is a powerful tool for analyzing network traffic and understanding how
 
 Beacons are periodic updates sent from the compromised machine to the C2 server. Mayor Malware encrypted these beacons to obscure their content.
 
-1. **Exfiltrated File Content**:
+**Exfiltrated File Content**:
    Using the provided AES key, we decrypted the beacon with CyberChef:
    - **Key**: `1234567890abcdef1234567890abcdef`
    - **Mode**: ECB
