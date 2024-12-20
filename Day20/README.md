@@ -28,7 +28,7 @@ Wireshark is a powerful tool for analyzing network traffic and understanding how
      ![C2 Command](images/CommandSentByC2.png)
 
    - The attacker exfiltrated a critical file via POST:
-   ![C2 Command](images/CommandSentByC2.png)
+   ![C2 Command](images/filenameFound.png)
 
 ---
 
