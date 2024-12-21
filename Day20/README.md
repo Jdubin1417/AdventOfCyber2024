@@ -1,15 +1,14 @@
 
 # Advent of Cyber 2024 - Day 20
 
-## Learning Objectives
-In this task, you will:
-- Investigate network traffic using Wireshark.
-- Identify indicators of compromise (IOCs) in captured network traffic.
-- Understand how C2 servers operate and communicate with compromised systems.
+## Challenge Overview
+Investigate captured network traffic using Wireshark to identify suspicious activity. Track communications between a compromised machine and its C2 server, uncover exfiltrated files, and decrypt encrypted messages to reveal secrets.
 
 ---
 
-## Investigating the Depths
+## Steps
+
+### Investigating the Depths
 
 Wireshark is a powerful tool for analyzing network traffic and understanding how Command and Control (C2) communications occur during an attack. In this challenge, we investigated a compromised machine to uncover Mayor Malware’s schemes.
 
@@ -32,7 +31,7 @@ Wireshark is a powerful tool for analyzing network traffic and understanding how
 
 ---
 
-## Decoding the Encrypted Beacon
+### Decoding the Encrypted Beacon
 
 Beacons are periodic updates sent from the compromised machine to the C2 server. Mayor Malware encrypted these beacons to obscure their content.
 

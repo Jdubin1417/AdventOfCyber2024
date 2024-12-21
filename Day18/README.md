@@ -1,21 +1,13 @@
 # Advent of Cyber 2024 - Day 18
 
-## Learning Objectives
-In today's task, you will:
-- Gain a fundamental understanding of how AI chatbots work.
-- Learn some vulnerabilities faced by AI chatbots.
-- Practice a **prompt injection attack** on WareWise, Wareville's AI-powered assistant.
+## Challenge Overview
+Explore how Artificial Intelligence (AI) can be utilized and exploited in various scenarios. Understand AI's role as a powerful assistant and uncover vulnerabilities like data poisoning, sensitive data disclosure, and prompt injection attacks. Use these insights to identify exploitation techniques and safeguard AI systems from potential misuse.
 
 ---
 
-## Connecting to the Machine
-1. Deploy the machine by clicking on the **"Start Machine"** button.
-2. Deploy the AttackBox or connect to the TryHackMe VPN.
-3. Access the WareWise chatbot at **http://10.10.51.46/** in the AttackBox browser.
+## Steps and Information
 
----
-
-## How AI Works
+### How AI Works
 AI works by:
 - Mimicking natural processes, such as neural networks, similar to the human brain.
 - Learning through training on datasets, determining appropriate outputs for given inputs.
@@ -29,7 +21,7 @@ Example of a system prompt:
 
 ---
 
-## Exploiting the AI
+### Exploiting the AI
 Three key vulnerabilities in AI models:
 1. **Data Poisoning**: Manipulating training data to produce flawed outputs.
 2. **Sensitive Data Disclosure**: Extracting confidential information from the AI.
@@ -37,7 +29,7 @@ Three key vulnerabilities in AI models:
 
 ---
 
-## Performing a Prompt Injection Attack
+### Performing a Prompt Injection Attack
 
 1. **Test the API Query**  
    WareWise interacts with an in-house API using specific queries:

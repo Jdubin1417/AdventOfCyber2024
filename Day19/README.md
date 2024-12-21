@@ -1,24 +1,14 @@
 
 # Advent of Cyber 2024 - Day 19
 
-## Learning Objectives
-In this task, you will:
-- Understand how to interact with an executable's API.
-- Intercept and modify internal APIs using Frida.
-- Hack a game with the help of Frida.
+## Challenge Overview
+Learn how to manipulate a game's internal logic using Frida by intercepting and modifying function calls. Understand how to identify and change key parameters, bypass restrictions, and uncover hidden functionalities in a multi-level game.
 
 ---
 
-## Game Hacking
+## Steps
 
-Even while penetration testing is becoming increasingly popular, game hacking only makes up a small portion of the larger cyber security field. With its 2023 revenue reaching approximately $183.9 billion, the gaming industry can easily attract attackers. They can do various malicious activities, such as:
-- Providing illegitimate ways to activate a game.
-- Automating game actions via bots.
-- Misusing game logic to simplify gameplay.
-
----
-
-## Exploring the Game
+### Exploring the Game
 
 The game starts with a penguin asking for a One-Time Password (OTP). This stage can be bypassed using Frida to intercept the function calls:
 ![Penguin Found](images/PenguinFound.png)
@@ -42,7 +32,7 @@ The game starts with a penguin asking for a One-Time Password (OTP). This stage 
 
 ---
 
-## Hacking Purchases
+### Hacking Purchases
 
 In the second stage, purchasing a costly item becomes a challenge. Frida allows you to bypass the cost check by intercepting the `_Z17validate_purchaseiii` function.
 
@@ -58,7 +48,7 @@ In the second stage, purchasing a costly item becomes a challenge. Frida allows 
 
 ---
 
-## Biometrics Bypass
+### Biometrics Bypass
 
 The final stage involves a biometric check. The function `_Z16check_biometricsPKc` verifies input strings, and Frida can intercept and modify its return value to bypass the check.
 
