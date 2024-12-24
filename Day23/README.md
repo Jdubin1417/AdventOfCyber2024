@@ -1,4 +1,4 @@
-# Day 23 - Password Cracking
+# Advent of Cyber 2024 - Day 23
 
 ## Challenge Overview
 Explore password security vulnerabilities by cracking hashes and accessing password-protected files to demonstrate weaknesses in password management and encryption practices.
